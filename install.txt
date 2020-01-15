@@ -1,0 +1,15 @@
+mkdir .selenium
+cd .selenium
+wget https://files.pythonhosted.org/packages/ed/9c/9030520bf6ff0b4c98988448a93c04fcbd5b13cd9520074d8ed53569ccfe/selenium-3.141.0.tar.gz
+tar -xvzf selenium-3.141.0.tar.gz
+rm selenium-3.141.0.tar.gz
+wget https://files.pythonhosted.org/packages/d9/ca/7279974e489e8b65003fe618a1a741d6350227fa2bf48d16be76c7422423/setuptools-41.2.0.zip
+unzip setuptools-41.2.0.zip
+rm setuptools-41.2.0.zip
+cd setuptools-41.2.0/
+python3 setup.py install --user
+cd ..
+cd selenium-3.141.0/
+python3 setup.py install --user
+cd ..
+wget https://github.com/AKnightWing/selenium-setup-linux/raw/master/chromedriver
